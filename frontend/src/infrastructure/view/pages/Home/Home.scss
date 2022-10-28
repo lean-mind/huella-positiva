@@ -1,0 +1,380 @@
+$base-div-padding: 2% 5% 2% 5%;
+$base-radius: 10px;
+$image-radius: 20%;
+$base-div-margin: 2% 4% 2% 4%;
+$line-space: 1.5;
+$title-font-size: 50px;
+$purple-tone: #7e254e;
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $base-div-padding;
+  color: gray;
+  font-size: 20px;
+
+  .welcome-div {
+    display: grid;
+    grid-template-areas:
+      'title title'
+      'info info'
+      'firstButton secondButton';
+    gap: 10px;
+    align-items: center;
+    background-color: $purple-tone;
+    padding: 0px 120px 0px 120px;
+    margin: $base-div-margin;
+    border-radius: $base-radius;
+    //background-image: url(../assets/helpingHand.jpg);
+
+    .title {
+      text-align: center;
+      grid-area: title;
+      font-size: $title-font-size;
+      color: white;
+    }
+
+    .info {
+      text-align: center;
+      font-size: 25px;
+      grid-area: info;
+      color: white;
+      line-height: $line-space;
+      height: 100%;
+    }
+
+    .first-button {
+      grid-area: firstButton;
+      padding-left: 100px;
+      margin-bottom: 40px;
+    }
+
+    .second-button {
+      grid-area: secondButton;
+      margin-bottom: 40px;
+    }
+  }
+
+  .main-event-div {
+    margin: $base-div-margin;
+    align-items: center;
+    display: grid;
+    gap: 50px;
+    border-radius: $base-radius;
+    grid-template-areas:
+      'title title title'
+      'media info info';
+
+    .title {
+      grid-area: title;
+      text-align: center;
+      color: $purple-tone;
+      font-size: $title-font-size;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      grid-area: media;
+    }
+
+    .info {
+      grid-area: info;
+      display: grid;
+      gap: 10px;
+      grid-template-areas:
+        'first first'
+        'second third';
+      align-items: center;
+      font-size: 20px;
+      line-height: $line-space;
+
+      .first {
+        grid-area: first;
+      }
+
+      .second {
+        grid-area: second;
+        text-align: center;
+      }
+
+      .third {
+        grid-area: third;
+        align-items: center;
+        margin-bottom: 90px;
+
+        img {
+          border-radius: $image-radius;
+        }
+      }
+    }
+  }
+
+  .volunteer-info-div {
+    background-color: $purple-tone;
+    padding: $base-div-padding;
+    color: white;
+    text-align: center;
+    margin: $base-div-margin;
+    border-radius: $base-radius;
+
+    .title {
+      font-size: $title-font-size;
+    }
+
+    .content {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .hashtag {
+      font-size: 30px;
+    }
+  }
+
+  .porpose-info-div {
+    margin: $base-div-margin;
+
+    .title {
+      text-align: center;
+      font-size: $title-font-size;
+      color: $purple-tone;
+    }
+
+    p {
+      text-align: center;
+      line-height: $line-space;
+      font-size: 25px;
+      color: gray;
+    }
+  }
+
+  .answers-div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-align: center;
+    margin: $base-div-margin;
+    gap: 20px;
+
+    .svg {
+      fill: $purple-tone;
+    }
+  }
+
+  .how-it-works-div {
+    display: grid;
+    grid-template-areas:
+      'title image'
+      'info image';
+    grid-column-gap: 5%;
+    align-items: center;
+    padding: $base-div-padding;
+    margin: $base-div-margin;
+
+    .title {
+      grid-area: title;
+      text-align: center;
+      font-size: $title-font-size;
+      color: $purple-tone;
+    }
+
+    p {
+      grid-area: info;
+      line-height: $line-space;
+      text-align: center;
+    }
+
+    img {
+      grid-area: image;
+      border-radius: $image-radius;
+    }
+  }
+
+  .work-areas-div {
+    margin: $base-div-margin;
+    text-align: center;
+
+    .primary-title {
+      font-size: $title-font-size;
+      color: $purple-tone;
+    }
+
+    .secondary-title {
+      font-size: 40px;
+      color: $purple-tone;
+    }
+
+    .content {
+      line-height: $line-space;
+    }
+
+    .highlighted-text {
+      color: grey;
+      font-weight: bold;
+    }
+  }
+
+  .allies-div {
+  }
+
+  .why-volunteer-div {
+    background-color: $purple-tone;
+    color: white;
+    margin: $base-div-margin;
+    border-radius: $base-radius;
+
+    .title {
+      font-size: $title-font-size;
+      text-align: center;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 5%;
+      align-items: center;
+      padding: $base-div-padding;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+          padding-left: 20px;
+        }
+
+        img {
+          border-radius: $image-radius;
+        }
+      }
+    }
+  }
+
+  .platform-description-div {
+    display: grid;
+    grid-template-areas:
+      'what image'
+      'who image'
+      'ecosystem image';
+    line-height: $line-space;
+    margin: $base-div-margin;
+
+    .title {
+      font-size: $title-font-size;
+      color: $purple-tone;
+    }
+
+    .what-div {
+      grid-area: what;
+    }
+
+    .who-div {
+      grid-area: who;
+    }
+
+    .eco-div {
+      grid-area: ecosystem;
+    }
+
+    .huella-image-div {
+      grid-area: image;
+      padding-top: 250px;
+
+      img {
+        display: block;
+        margin: auto;
+        width: 750px;
+        border-radius: $image-radius;
+      }
+    }
+  }
+
+  .collaborators-div {
+    margin: $base-div-margin;
+
+    p {
+      text-align: center;
+      font-size: $title-font-size;
+      color: $purple-tone;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        padding: 10px;
+        width: 150px;
+        border-radius: $image-radius;
+      }
+    }
+  }
+
+  .other-info {
+    line-height: $line-space;
+    margin: $base-div-margin;
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+      'left title'
+      'left experts'
+      'left info'
+      'button button';
+
+    .title {
+      font-size: $title-font-size;
+      color: $purple-tone;
+      text-align: center;
+    }
+
+    .left-div {
+      grid-area: left;
+    }
+
+    .right-div {
+      .title-section {
+        grid-area: title;
+      }
+
+      .experts-section {
+        grid-area: experts;
+      }
+
+      .more-info-section {
+        grid-area: info;
+      }
+    }
+
+    .button-section {
+      margin: -80px auto 0 auto;
+      grid-area: button;
+    }
+  }
+
+  .home-media-div {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: $title-font-size;
+    color: $purple-tone;
+    margin: $base-div-margin;
+
+    div {
+      padding: 30px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .Home {
+    padding: 0;
+    background-size: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  @import "../../../styles/Home/homeMobile";
+}

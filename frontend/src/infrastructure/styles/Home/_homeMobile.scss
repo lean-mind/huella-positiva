@@ -1,0 +1,239 @@
+$title-mobile-font-size: 1.4375rem;
+$subtitle-mobile-font-size: 1.25rem;
+$basic-mobile-font-size: 0.9375rem;
+
+.main{
+  font-size: $basic-mobile-font-size;
+
+  .LinkButton {
+    padding: 0.5rem;
+    font-size: $basic-mobile-font-size;
+    margin-bottom: 1rem;
+  }
+
+  .welcome-div {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "info"
+      "firstButton"
+      "secondButton";
+    padding: 0px 4% 0px 4%;
+    gap: 0;
+
+    .title {
+      font-size: $title-mobile-font-size;
+      margin-bottom: 1rem;
+    }
+
+    .info {
+      font-size: $basic-mobile-font-size;
+      margin-bottom: 1rem;
+    }
+
+    .first-button {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .second-button {
+      margin-bottom: 0;
+    }
+  }
+
+  .main-event-div {
+    grid-template-areas:
+      "title"
+      "media"
+      "info";
+    gap: 0;
+
+    .title {
+      font-size: $title-mobile-font-size;
+      margin-bottom: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .info {
+      grid-template-areas:
+        "first"
+        "second"
+        "third";
+      gap: 0;
+      font-size: $basic-mobile-font-size;
+
+      .second {
+        text-align: left;
+      }
+
+      .third {
+        margin-bottom: 1.5rem;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .volunteer-info-div {
+    .title {
+      font-size: $title-mobile-font-size;
+    }
+
+    .content {
+      font-size: $basic-mobile-font-size;
+    }
+
+    .hashtag {
+      font-size: $basic-mobile-font-size;
+    }
+  }
+
+  .porpose-info-div {
+    .title {
+      font-size: $title-mobile-font-size;
+    }
+
+    p {
+      font-size: $basic-mobile-font-size;
+    }
+  }
+
+  .answers-div {
+    display: initial;
+
+    .DescriptiveImage {
+      p {
+        font-size: $basic-mobile-font-size;
+      }
+
+      .title {
+        font-size: $title-mobile-font-size;
+      }
+    }
+  }
+
+  .how-it-works-div {
+    display: inline;
+
+    .title {
+      font-size: $title-mobile-font-size;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    img {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+  }
+
+  .work-areas-div {
+    .primary-title {
+      font-size: $title-mobile-font-size;
+    }
+
+    .secondary-title {
+      font-size: $subtitle-mobile-font-size;
+    }
+  }
+
+  .why-volunteer-div {
+    .title {
+      font-size: $title-mobile-font-size;
+    }
+
+    .content {
+      display: inline;
+
+      div {
+        padding: 0.4rem;
+
+        p {
+          padding-left: 0.4rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .platform-description-div {
+    display: grid;
+    grid-template-areas:
+      "image"
+      "what"
+      "who"
+      "ecosystem";
+
+    .title {
+      font-size: $title-mobile-font-size;
+    }
+
+    .huella-image-div {
+      padding: 1rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .collaborators-div {
+    p {
+      font-size: $title-mobile-font-size;
+    }
+
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      img {
+        padding: 0.5rem;
+        width: 50vw;
+      }
+    }
+  }
+
+  .other-info {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+      "left"
+      "title"
+      "experts"
+      "info"
+      "button";
+
+    .title {
+      font-size: $title-mobile-font-size;
+    }
+
+    .button-section {
+      margin: auto;
+    }
+  }
+  
+  .home-media-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: $title-mobile-font-size;
+
+    div {
+      padding: 0;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

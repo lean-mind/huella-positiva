@@ -1,0 +1,16 @@
+.SocialNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg.socialIcon {
+    margin: 10px;
+    width: 35px;
+    fill: #ffffff;
+    transform: scale(1);
+    transition: all 0.3s linear;
+    &:hover {
+      fill: #eabd00;
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.ContentInfoRows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    min-width: 25px;
+    max-width: 50px;
+    height: 30px;
+    margin: 10px;
+  }
+}

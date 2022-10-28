@@ -1,0 +1,7 @@
+# If you let variables empty, by default has this configuration:
+#   HOST: localhost
+#   PORT_URI: 3000
+#   PORT_API: 8080
+
+REACT_APP_BASE_URI=
+REACT_APP_BASE_API=

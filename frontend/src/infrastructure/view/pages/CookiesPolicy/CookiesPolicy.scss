@@ -1,0 +1,79 @@
+.CookiesPolicy {
+  padding: 0 4rem;
+  text-align:left;
+  font-size: 1rem;
+
+  h2 {
+    color: #ad2d68;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    color: #eabd00;
+    font-weight: normal;
+  }
+
+  .LinkText {
+    color: #e34d92;
+    text-decoration: none;
+  }
+  
+  .first-row {
+    align-items: flex-start;
+    background-color: #7e254e;
+    border-radius: 0.8rem;
+    color: white;
+    display: flex;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+
+    &__svg {
+      margin-right: 2rem;
+      min-width: 5rem;
+      width: 15rem;
+    }
+
+  }
+  .other-rows {
+    background-color: white;
+    border-radius: 0.8rem;
+    color: #7e7e7e;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 160%;
+    margin-top: 2rem;
+    padding: 1rem;
+    ul{
+      padding-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .CookiesPolicy{
+    padding: 0 3rem 0 3rem;
+
+  }
+}
+@media (max-width: 900px){
+  .CookiesPolicy{
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+@media (max-width: 600px){
+  .CookiesPolicy{
+    padding: 0 1.5rem 0 1.5rem;
+    .first-row{
+      display: inline-flex;
+      flex-direction: column;
+
+      &__svg{
+        width: 8rem;
+        margin-bottom: 0.5rem;
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: backend
+
+aws:
+  paramstore:
+    enabled: false
+    failFast: false
+  ssm:
+    endpoint: http://localhost:4583
+
+cloud:
+  aws:
+    region:
+      static: us-east-1

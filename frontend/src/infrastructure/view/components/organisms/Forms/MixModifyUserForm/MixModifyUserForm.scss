@@ -1,0 +1,224 @@
+
+%rowConfigurationData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-div {
+  padding: 0.5rem 1rem;
+
+  .personal-data {
+    border-radius: 1rem;
+    width: calc(90% - 22px);
+    padding: 2rem;
+    margin: 2rem;
+    background: white;
+
+    header {
+      background: #eabd00;
+      border-radius: 2px;
+      height: 10rem;
+
+
+      label {
+        img {
+          position: absolute;
+          margin: 75px 40px 65px 40px;
+        }
+
+        input {
+          display: none;
+        }
+      }
+    }
+
+    .first-row-personal-data {
+      @extend %rowConfigurationData;
+      width: calc(100% - 22px);
+      margin-top: 5rem;
+      padding: 1rem;
+
+
+      .FieldForm {
+        width: calc(50% - 10px);
+
+      }
+    }
+
+    .second-row-personal-data {
+      @extend %rowConfigurationData;
+      width: calc(100% - 22px);
+      padding: 1rem;
+
+
+      section {
+        width: calc(15% - 10px);
+
+        .FieldForm {
+          width: calc(100% - 5px);
+        }
+
+      }
+
+      .FieldForm {
+        width: calc(40% - 5px);
+      }
+    }
+  }
+
+  .second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+
+    border-radius: 1rem;
+    width: calc(94% - 22px);
+
+    .location-data {
+      border-radius: 1rem;
+      width: calc(40% - 10px);
+      padding: 2rem;
+      background: white;
+
+      .location-data-first-row {
+        @extend %rowConfigurationData;
+        width: calc(100% - 22px);
+        padding: 1rem;
+
+        .FieldForm:first-child {
+          width: calc(30% - 10px);
+        }
+
+        .FieldForm:last-child {
+          width: calc(50% - 10px);
+        }
+      }
+
+      .location-data-second-row {
+        @extend %rowConfigurationData;
+        width: calc(100% - 22px);
+        padding: 1rem;
+
+        .FieldForm {
+          width: calc(50% - 10px);
+        }
+
+        .FormSelect {
+          width: calc(50% - 10px);
+
+          select {
+            border-radius: 5px;
+            height: 52px;
+            border: 1px solid lightgrey;
+            padding: 10px 10px;
+            font-size: 1rem;
+            background: #f2f2f2;
+
+          }
+        }
+
+
+      }
+
+      .location-data-third-row {
+        @extend %rowConfigurationData;
+        width: calc(100% - 22px);
+        padding: 1rem;
+
+        .FieldForm {
+          width: calc(100% - 10px);
+        }
+
+
+      }
+    }
+
+    .additional-data {
+      border-radius: 1rem;
+      width: calc(40% - 10px);
+      padding: 2rem;
+      background: white;
+
+      .additional-data-row {
+        @extend %rowConfigurationData;
+        width: calc(100% - 22px);
+
+        .additional-data-first-col {
+          width: calc(50% - 10px);
+
+          .url-networks {
+            padding: 1rem;
+          }
+
+        }
+
+        .additional-data-second-col {
+          width: calc(50% - 10px);
+
+
+          .TextAreaForm {
+            .Label {
+              margin-bottom: 0;
+            }
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  .third-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    width: calc(94% - 22px);
+    padding: 1rem;
+    background: white;
+    margin: 2rem;
+
+
+    .cv-button-col {
+      height: fit-content;
+      padding: 1rem 3.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+      background: #7e254e;
+      font-size: 1rem;
+      text-align: center;
+
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      input {
+        display: none;
+      }
+
+      &.uploaded {
+        background: #eabd00;
+      }
+
+    }
+
+    .submit-button {
+      text-align: center;
+
+      .SubmitButton {
+        padding: 1rem 4rem;
+
+      }
+    }
+
+
+  }
+
+
+}

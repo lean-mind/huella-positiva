@@ -1,0 +1,1 @@
+export { DescriptiveImage } from './DescriptiveImage';

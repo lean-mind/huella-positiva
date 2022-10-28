@@ -1,0 +1,152 @@
+.PrivacyPolicy{
+  padding: 0 4rem;
+  text-align: left;
+  color: #7e7e7e;
+  font-size: 1rem;
+  
+  .LinkText {
+    color: #e34d92;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  h1{
+    color: black;
+    font-weight: normal
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    color: #ad2d68;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: #eabd00;
+    font-weight: normal;
+    font-size: large;
+  }
+
+  .first-row {
+    display: flex;
+    align-items: flex-start;
+    background-color: #7e254e;
+    color: white;
+    margin-bottom: 5rem;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    font-size: 0.9rem;
+
+    &__svg {
+      margin-right: 2rem;
+      min-width: 5rem;
+      width: 15rem;
+    }
+
+  }
+
+  .other-rows {
+    background-color: white;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    font-weight: normal;
+    font-size: 0.8rem;
+    padding: 1rem;
+
+    .LinkText {
+      color: #eabd00;
+    }
+
+    &__div{
+      width: 50%;
+    }
+    
+  }
+
+  .main{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+    
+    .LinkText {
+      color: #741340;
+    }
+
+    &__element{
+
+      background-color: white;
+      border-radius: 0.8rem;
+      margin-top: 5rem;
+      padding: 1rem;
+      width: 50%;
+
+      &__p{
+        font-size: 1rem;
+        line-height: 1.5em;
+      }
+
+      &:nth-child(2){
+        margin-left: 5rem;
+      }
+
+    }
+  }
+      
+}
+
+@media (max-width: 1200px){
+  .PrivacyPolicy{
+    padding: 0 4rem;
+
+    .other-rows{
+      display:flex;
+      flex-direction: column;
+
+      &__div{
+        width: 100%;
+      }
+
+    }
+
+    .main{
+      display: flex;
+      flex-direction: column;
+
+      &__element{
+        margin-top: 3rem;
+        padding: 1rem;
+        width: auto;
+        
+        &:nth-child(2){
+          margin-left: 0rem;
+        }
+
+      }
+
+    }
+
+  }
+}
+@media (max-width: 700px){
+  .PrivacyPolicy{
+    padding: 0 2rem;
+
+    .first-row{
+      display: flex;
+      flex-direction: column;
+      &__svg {
+        margin-right: 0rem;
+        min-width: 3rem;
+        width: auto;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 600px){
+  .PrivacyPolicy{
+    padding: 0 1.5rem;
+  }
+}

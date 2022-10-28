@@ -1,0 +1,1 @@
+export { ConvocatoryRegister } from './ConvocatoryRegister';

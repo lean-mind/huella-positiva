@@ -1,0 +1,1 @@
+export { ConvocatoryTextSection } from './ConvocatoryTextSection';

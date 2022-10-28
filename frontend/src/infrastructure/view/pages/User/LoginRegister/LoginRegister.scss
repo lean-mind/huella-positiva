@@ -1,0 +1,26 @@
+$bg: url('assets/register.svg');
+
+.LoginRegister {
+  background: $bg no-repeat top center;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px 0;
+}
+
+@media (min-width: 576px) {
+  .LoginRegister {
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .LoginRegister {
+    padding: 0;
+    background-size: 45%;
+  }
+}
+
+

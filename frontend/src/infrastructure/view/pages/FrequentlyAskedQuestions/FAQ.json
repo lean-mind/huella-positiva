@@ -1,0 +1,36 @@
+{
+    "questions": [
+        {
+            "title": "¿Qué es Huellapositiva.com?",
+            "answer": "Huellapositiva.com es una plataforma online con la que se facilita, incentiva e impulsa el voluntariado en Canarias. A través de esta web las entidades e iniciativas promocionan sus oportunidades de voluntariado."
+        },
+        {
+            "title": "¿En qué consiste este Voluntariado? ¿Qué cosas se están haciendo?",
+            "answer": "Estamos en las primeras fases de demanda de voluntariado para la campaña de #CORONAYUDA. Por lo que aún se están articulando las iniciativas, pero a modo de referencia estos son las necesidades en las que están trabando las entidades:  educación (apoyo escolar, clases online de refuerzo a Primaria, ESO y Bachillerato…), apoyo vecinal (ayuda entre la gente que vive más cerca), colectivos vulnerables y cuidados, entre otras."
+        },
+        {
+            "title": "¿Quién coordina la campaña #CORONAYUDA?",
+            "answer": "El lanzamiento de esta campaña está coordinado por Soy Mamut en un formato colaborativo en alianza con profesionales y entidades del ecosistema local entre las que se encuentran: Down Las Palmas, Cátedra de Medio Ambiente y Desarrollo Sostenible – ULL, la Oficina de Sostenibilidad de la ULPGC, La Cumbre Vive, Ruta Siete ULPGC, Miplaza, etc. \n Soy Mamut es una fundación con CIF G50841840 y una asociación de mismo nombre y con CIF G76244565. Estamos acreditados por el Gobierno de Canarias como entidad de voluntariado con Nº Registro Voluntariado: 35/2018/278 y por la Red Nacional Reconoce. Somos pioneros de la Innovación Social en España y, como colectivo, contamos con más de 10 años de experiencia en la gestión de voluntariado a través de distintas iniciativas de innovación social."
+        },
+        {
+            "title": "¿Con qué tipo de entidades trabajan?",
+            "answer": "Con cualquier tipo de entidad pública o privada, siempre y cuando la iniciativa que desarrollen esté dentro de las actividades de interés general recogidas en la Ley 45/2015 de Voluntariado."
+        },
+        {
+            "title": "¿Cuándo empieza el voluntariado?",
+            "answer": "Estamos en las primeras etapas de voluntariado en la crisis del Coronavirus. Las oportunidades de participación son reducidas y con perfiles determinados, pero poco a poco se irán articulando más opciones. Animamos a todo el mundo a registrarse y ser paciente cumpliendo con las recomendaciones de las instituciones.  "
+        },
+        {
+            "title": "¿Puedo ayudar si no resido en Canarias?",
+            "answer": "Si, podrás hacerlo para las iniciativas que no requieran de presencialidad. "
+        },
+        {
+            "title": "¿Puedo solicitar ayuda si no resido en Canarias?",
+            "answer": "Esta es una plataforma de voluntariado diseñada para desarrollar labores en las Islas Canarias. Pero siempre que esté en nuestra mano desde el punto vista logístico / organizativo tenemos disposición de ayuda y colaboración con otros lugares. "
+        },
+        {
+            "title": "¿Soy un profesional, pero no sé cómo puedo encajar en el proyecto?",
+            "answer": "Rellena el formulario de contacto y explícanos tu caso para que podamos valorar opciones."
+        }
+    ]
+}

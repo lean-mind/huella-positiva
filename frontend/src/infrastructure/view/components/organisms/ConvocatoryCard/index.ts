@@ -1,0 +1,1 @@
+export { ConvocatoryCard } from './ConvocatoryCard';

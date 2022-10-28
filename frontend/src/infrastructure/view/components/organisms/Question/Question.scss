@@ -1,0 +1,26 @@
+.Question {
+  background-color: #f2f2f2;
+  border-radius: 1.7rem;
+  margin: 1rem;
+  padding: 1.7rem;
+  .Title {
+    min-height: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    h2 {
+      margin: 0;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+  }
+  .Content {
+    margin-top: 0.8rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 500ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
+    color: #7e7e7e;
+    line-height: 160%;
+  }
+}

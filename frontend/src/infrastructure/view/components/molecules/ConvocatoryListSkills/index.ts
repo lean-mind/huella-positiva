@@ -1,0 +1,1 @@
+export { ConvocatoryListSkills } from './ConvocatoryListSkills';

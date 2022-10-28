@@ -1,0 +1,32 @@
+.VolunteerList {
+  table {
+    width: 60rem;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  th {
+    padding: 0.8rem;
+    text-align: left;
+  }
+  tr {
+    height: 2rem;
+    background-color: white;
+  }
+  td {
+    padding: 0.7rem;
+    margin: 0;
+    border: 1px solid #eaeaea;
+  }
+  td:nth-child(2) {
+    width: 5rem;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    color: #eabd00;
+    cursor: pointer;
+  }
+}

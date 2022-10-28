@@ -1,0 +1,59 @@
+$purple-tone: #7e254e;
+$yellow-tone: #eabd00;
+
+.esal {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 5rem 10rem 5rem 5rem;
+  row-gap: 1.57rem;
+  text-align: center;
+  h1{
+    grid-column: 2/3;
+    font-size: 3rem;
+    color: $purple-tone;
+    font-weight: normal;
+  }  
+  .content{
+    grid-column: 2/3;
+    color: gray;
+    p {
+      margin-bottom: 2.5rem;
+    }
+  }
+  .buttons{
+    grid-column: 2/3;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    button{
+      color: white;
+      background-color: $yellow-tone;
+      border-style: none;
+      border-radius: 0.3rem;
+      font-size: 1rem;
+      padding: 1.25rem 2.5rem;
+      transition: 1s;
+      &:hover{
+        background-color: $purple-tone;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .last-message{
+    grid-column: 2/3;
+    font-size: 1rem;
+    h2{
+      font-weight: normal;
+      color: $purple-tone;
+    }
+  }
+  .LinkText{
+    text-decoration: none;
+    color: $yellow-tone;
+    font-weight: bold; 
+    &:hover{
+      color: $purple-tone;
+    }
+  }
+}

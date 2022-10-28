@@ -1,0 +1,1 @@
+export { ConvocatoryInfo } from './ConvocatoryInfo';

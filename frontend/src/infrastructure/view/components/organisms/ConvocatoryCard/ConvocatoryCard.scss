@@ -1,0 +1,106 @@
+.ConvocatoryCard {
+  background: #f2f2f2;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  img {
+    max-width: 100%;
+    border-radius: 5px 0px 0px 5px;
+  }
+  .ContentConvocatory {
+    padding: 5px;
+    .title {
+      margin-bottom: 10px;
+    }
+    .description {
+      margin-bottom: 10px;
+    }
+    .ContentInfoRows {
+      display: flex;
+      align-items: center;
+
+      img {
+        min-width: 30px;
+        max-width: 30px;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ConvocatoryCard {
+    min-height: 100px;
+    min-width: 100%;
+    display: flex;
+    background: #f6f6f6;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.5);
+    p,
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      min-width: 325px;
+      max-width: 500px;
+      max-height: 250px;
+      align-self: center;
+    }
+    .ContentConvocatory {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 10px 20px;
+      .ContentInfo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .ContentInfoRows {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          img {
+            min-width: 25px;
+            max-width: 50px;
+            height: 30px;
+            margin: 10px;
+          }
+          &:nth-child(1) {
+            grid-column: 1/2;
+          }
+          &:nth-child(2) {
+            grid-column: 2/3;
+          }
+          &:nth-child(3) {
+            grid-column: 3/4;
+          }
+          &:nth-child(4) {
+            grid-column: 1/2;
+          }
+          &:nth-child(5) {
+            grid-column: 2/3;
+          }
+        }
+      }
+      a {
+        grid-column: 1/5;
+        grid-row: 3/4;
+        justify-self: center;
+        align-self: center;
+        min-width: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .ConvocatoryCard {
+    .ContentConvocatory {
+      .ContentInfo {
+        grid-template-columns: repeat(3, 2fr) 1fr;
+      }
+      a {
+        grid-column: 4/5;
+        grid-row: 1/3;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "Convocatory": {
+    "id": "1",
+    "title": "Recogida de residuos: Igueste de San Andres",
+    "organizer": "Soy mamut",
+    "category": "Presencial",
+    "endingDate": "string",
+    "minimumAge": 1,
+    "maximumAge": 1,
+    "province": 1,
+    "town": "Igueste de San Andrés",
+    "address": "string",
+    "startingDate": "string",
+    "closingDate": "string",
+    "startingVolunteeringDate": "string",
+    "status": 1,
+    "description": "Se requieren voluntarios/as para colaborar con un grupo de recogida de residuos en la playa de Igueste de San Andrés. Se organizaran varios grupos a los que se les proporcionarán bolsas y guantes para la recogida de todo tipo de residuos.",
+    "instructions": "Se requieren voluntarios/as para colaborar con un grupo de recogida de residuos en la playa de Igueste de San Andrés. Se organizaran varios grupos a los que se les proporcionarán bolsas y guantes para la recogida de todo tipo de residuos.",
+    "extraInfo": "Se requieren voluntarios/as para colaborar con un grupo de recogida de residuos en la playa de Igueste de San Andrés. Se organizaran varios grupos a los que se les proporcionarán bolsas y guantes para la recogida de todo tipo de residuos.",
+    "duration": 1,
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Igueste_de_San_Andr%C3%A9s._principal.jpg",
+    "inscribedVolunteers": null,
+    "inscribedVolunteersCount": 4,
+    "skills": [
+      { "name": "Skill 1", "description": "Descrition for skill1" },
+      { "name": "Skill 2", "description": "Descrition for skill2" },
+      { "name": "Skill 1", "description": "Descrition for skill1" }
+    ],
+    "requirements": ["Requirement 1"]
+  }
+}

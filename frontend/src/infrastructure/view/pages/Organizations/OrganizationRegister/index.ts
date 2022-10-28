@@ -1,0 +1,1 @@
+export { OrganizationRegister } from './OrganizationRegister';

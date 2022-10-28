@@ -1,0 +1,1 @@
+export { InputImageForm } from './InputImageForm';

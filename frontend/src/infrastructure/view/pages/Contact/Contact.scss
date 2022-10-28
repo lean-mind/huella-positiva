@@ -1,0 +1,138 @@
+$purple-tone: #7e254e;
+$yellow-tone: #eabd00;
+
+div {
+  .main-div {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    text-align: left;
+    
+  }
+
+  .info-div {
+    grid-column: 2/3;
+    ul{
+      padding: 0;
+      list-style-type: none;
+    }
+    .title {
+      text-align: center;
+      color: $purple-tone;
+      font-size: 1.5rem;
+    }
+    div {
+      font-size: 1rem;
+      li {
+        margin-top: 2%;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .faq {
+      color: black;
+      text-align: center;
+      margin: 24px 0px 16px;
+      .LinkText {
+        color: $yellow-tone;
+        text-decoration: none;
+        font-weight: normal;
+        &:hover {
+          color: $purple-tone;
+        }
+      }
+    }
+
+    .slogan {
+      text-align: center;
+      color: $purple-tone;
+      font-size: 35px;
+    }
+  }
+
+  .contact-form-div {
+    grid-column: 2/3;
+    color: black;
+    .form-fields-div {
+      font-size: 15px;
+      .fields {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 2%;
+        margin-bottom: 5%;
+        .prueba{
+          grid-column: 1/2;
+        }
+        input {
+          height: 1em;
+          border: 1px solid $purple-tone;
+        }
+        .text-area {
+          grid-column: 1/3;
+          p{
+            margin: 0;
+          }
+          .InputTextArea {
+            height: 6em;
+            resize: vertical;
+            border: 1px solid $purple-tone;
+          }
+        }
+      }
+
+
+      .consent-captcha {
+        color: black;
+        display: grid;
+        grid-template-columns: none;
+        gap: 20%;
+        margin-top: 2em;
+        margin-bottom: 4em;
+        .LinkText {
+          color: $yellow-tone;
+          font-weight: normal;
+          text-decoration: none;
+          &:hover {
+            color: $purple-tone;
+          }
+        }
+        button {
+          background-color: $purple-tone;
+          gap: 2%;
+        }
+      }
+
+    }
+  }
+
+  
+
+  
+}
+
+@media (max-width: 992px){
+  div{
+    .main-div{
+      display: grid;
+      grid-template-columns: 5% 90% 5%;
+    }
+  }
+}
+
+@media (max-width: 700px){
+  div{    
+    .contact-form-div {
+      .form-fields-div {
+        .fields{
+          display: flex;
+          flex-direction: column;
+          .text-area{
+            .InputTextArea{
+              height: 6em;
+              resize: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

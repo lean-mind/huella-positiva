@@ -1,0 +1,1 @@
+export { ConvocatoryListRequirements } from './ConvocatoryListRequirements';

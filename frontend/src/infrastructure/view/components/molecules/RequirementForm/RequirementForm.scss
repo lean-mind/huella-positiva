@@ -1,0 +1,21 @@
+.RequirementForm {
+  border-bottom: 1px solid #7e254e;
+  color: #7c7c7c;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  .DotInput {
+    background-color: #d0d0d0;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 0.4rem;
+    border-radius: 50%;
+  }
+  input {
+    border: none;
+    margin: 1vh 0;
+    width: 100%;
+    outline: none;
+    color: #7c7c7c;
+  }
+}

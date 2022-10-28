@@ -1,0 +1,33 @@
+.ConvocatoryList {
+  display: grid;
+  grid-gap: 20px;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  .pageNav {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: space-around;
+    margin: 30px;
+    width: 70%;
+  }
+}
+
+.navigation-button {
+  min-height: 40px;
+  max-width: 300px;
+  border-radius: 5px;
+  background: #eabd00;
+  font-size: 1rem;
+  outline: none;
+  margin: 10px auto;
+  padding: 10px 60px;
+  color: white;
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

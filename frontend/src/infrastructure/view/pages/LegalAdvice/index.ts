@@ -1,0 +1,1 @@
+export { LegalAdvice } from './LegalAdvice';

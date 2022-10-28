@@ -1,0 +1,1 @@
+export { ConvocatoryList } from './ConvocatoryList';
