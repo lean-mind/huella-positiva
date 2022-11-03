@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import {Provider} from './Context';
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(  <Provider><App /></Provider>, div);
-  ReactDOM.unmountComponentAtNode(div);
+    const root = ReactDOM.createRoot(document.createElement('div'))
+    root.render(<Provider><App/></Provider>);
+    root.unmount()
 });
