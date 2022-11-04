@@ -40,6 +40,8 @@ for install Windows Subsystem Linux (WSL)
 
 ## Run the project locally
 
+![running application locally gif](.github/docs/assets/running-application-locally.gif)
+
 - Run `make database-up` to provide the database/localstack dependencies
 
 ⚠️ **Before running the backend locally, whe need up the databases** ⚠️
