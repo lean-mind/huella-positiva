@@ -43,22 +43,22 @@ help: ## Show command list
 ########################   BASIC    #################################
 ######################################################################
 .PHONY: down
-down-database: ## Stop database
+database-down: ## Stop database
 	docker-compose -f backend/docker/local/docker-compose.yml down -t0 $(SERVICES)
 
 .PHONY: up
-up-database: .ensure-network ## Start database necessaries
+database-up: .ensure-network ## Start database necessaries
 	echo "\n\n${MSG_SEPARATOR}\n\n Running databases and 🐳 dockers.\n\n${MSG_SEPARATOR}\n\n"
 	docker-compose -f backend/docker/local/docker-compose.yml up -d -t0 $(SERVICES)
 
 .PHONY: build
-up-backend: ## Start frontend
+backend-up: ## Start frontend
 	echo "\n\n${MSG_SEPARATOR}\n\n Running the 🤘 BACKEND.\n\n"
 	echo "Go to http://localhost:8080/actuator/health. Expect to see {\"status\",\"up\"}.\n\n"
 	echo "Go to http://localhost:8080/swagger-ui. To see the documentation API.\n\n${MSG_SEPARATOR}\n\n"
 	cd ./backend && mvn clean package spring-boot:run -DskipTests -Dmaven.javadoc.skip=true
 
-up-frontend: ## Start frontend
+frontend-up: ## Start frontend
 	echo "\n\n${MSG_SEPARATOR}\n\n Running the 🎨 FRONTEND.\n\n${MSG_SEPARATOR}\n\n"
 	cd ./frontend && npm run start
 
@@ -67,7 +67,7 @@ up-frontend: ## Start frontend
 	[ -z "$(shell $(DOCKER_EXEC) network ls -q -f name=$(NETWORK))" ] && $(DOCKER_EXEC) network create $(NETWORK) || true
 
 .PHONY: install
-install: node-modules up-database up-backend  ## First time install
+install: node-modules database-up backend-up  ## First time install
 
 .PHONY: build
 build: ## Build application .Jar

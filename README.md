@@ -34,20 +34,20 @@ for install Windows Subsystem Linux (WSL)
 
 - Clone this repo anywhere: `git clone git@github.com:lean-mind/huella-positiva.git`
 - Build container images, start containers databases, install node-modules dependencies and up the backend: `make install`
-- Now the databases and API is running, whe need now run the frontend `make up-frontend`
+- Now the databases and API is running, whe need now run the frontend `make frontend-up`
 
 [⬆Go top](#-table-of-contents)
 
 ## Run the project locally
 
-- Run `make up-database` to provide the database/localstack dependencies
+- Run `make database-up` to provide the database/localstack dependencies
 
 ⚠️ **Before running the backend locally, whe need up the databases** ⚠️
 
-- In the same terminal window run `make up-backend` to up the API application
+- In the same terminal window run `make backend-up` to up the API application
     > Go to `http://localhost:8080/actuator/health`. Expect to see `{"status","up"}`.
 
-- In **new terminal** window run `make up-frontend` to up the WEB GUI application
+- In **new terminal** window run `make frontend-up` to up the WEB GUI application
 
 
 [⬆Go top](#-table-of-contents)
