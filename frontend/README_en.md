@@ -2,11 +2,7 @@
 
 ## How to run the project
 
-The back-end needs to be running for requests and forms to work as expected. This is an optional step.
-
-### How to run the back-end application
-
-Updated instructions on how to run the back-end can be found in [the back-end's own repository](https://github.com/ayudadigital/huelladigital-backend).
+The back-end needs to be running for requests and forms to work as expected. This is an optional step. More information in [Backend documentation](../backend/README.md)
 
 ### How to run the front-end application
 
@@ -27,43 +23,36 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm test:e2e`
-Launches the cypress with test end to end runner in the interactive watch mode.<br />
-See more information about [cypress](https://docs.cypress.io/guides/overview/why-cypress.html)
+
+Launches the cypress with test end to end runner in the interactive watch mode. See more information about [cypress](https://docs.cypress.io/guides/overview/why-cypress.html)
 
 ### `npm run new:fc`
 
-Create a new functional component in the specified path, inside a directory with the specified component name.<br />
-You can add the arguments `name` and `path` to not use the interactive cli.
+Create a new functional component in the specified path, inside a directory with the specified component name. You can add the arguments `name` and `path` to not use the interactive cli.
 
 ### `npm run new:hook`
 
-Create a new hook abstraction inside `hooks` directory with the specified hook name.<br />
-**Remember** to use the prefix `use`.
+Create a new hook abstraction inside `hooks` directory with the specified hook name. **Remember** to use the prefix `use`.
 
 ### `npm run storybook`
 
-Run storybook to display all the .stories.tsx.<br />
-Open [http://localhost:9001](http://localhost:9001) to view it in the browser.
+Run storybook to display all the .stories.tsx. Open [http://localhost:9001](http://localhost:9001) to view it in the browser.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified, and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The build is minified, and the filenames include the hashes. Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
