@@ -30,7 +30,7 @@
         <junit4.version>4.13.1</junit4.version>
         <localstack.version>1.14.1</localstack.version>
         <localstack-utils.version>0.2.1</localstack-utils.version>
-        <lombok.version>1.18.10</lombok.version>
+        <lombok.version>1.18.22</lombok.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.failsafe.version>2.22.2</maven.failsafe.version>
         <maven.project.info.reports.version>3.0.0</maven.project.info.reports.version>
