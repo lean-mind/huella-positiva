@@ -1,0 +1,10 @@
+POST {{root}}/contactperson
+Content-Type: application/json
+
+{
+  "name": "Pruebacontactperson",
+  "surname": "contactperson",
+  "phoneNumber": "+850 12419287524",
+  "email": "prueba@soymamut.com",
+  "password": "{{general_password}}"
+}
