@@ -1,8 +1,8 @@
-import {http} from '../http/http';
-import {ROUTE} from '../http/routes';
-import {BASE} from '../base';
+import { http } from '../http/http';
+import { ROUTE } from '../http/routes';
+import { BASE } from '../base';
 import UserProfileDTO from '../http/dtos/UserProfileDTO';
-import {profileRepository} from './Profile.repository';
+import { profileRepository } from './Profile.repository';
 
 const profile: UserProfileDTO = {
     name: 'Fernando Arnaldo',
@@ -24,10 +24,17 @@ const profile: UserProfileDTO = {
 describe('profileRepository', () => {
     let spyFunctionGet: jest.SpyInstance;
     let spyFunctionPost: jest.SpyInstance;
+
     beforeEach(() => {
         spyFunctionGet = jest.spyOn(http, 'get');
         spyFunctionPost = jest.spyOn(http, 'post');
     });
+
+    afterEach(() => {
+        spyFunctionGet.mockRestore();
+        spyFunctionPost.mockRestore();
+    });
+
     it('should try bring profile with an http get', () => {
         profileRepository.profile();
         expect(spyFunctionGet).toBeCalledWith(
@@ -35,6 +42,7 @@ describe('profileRepository', () => {
             true,
         );
     });
+
     it('return volunteer profile has minimal data', () => {
         const hasMinimalDataNecessary = profileRepository.isProfileComplete(profile);
         expect(hasMinimalDataNecessary).toBeTruthy();
@@ -48,7 +56,5 @@ describe('profileRepository', () => {
             JSON.stringify(profile),
             'application/json', true
         );
-
-
     });
 });
