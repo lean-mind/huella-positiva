@@ -4,7 +4,6 @@ import { ROUTE } from '../http/routes';
 import { BASE } from '../base';
 import { activateAuth } from '../http/cookies';
 import { VolunteerCredential } from '../../domain/models/Credential';
-import UserProfileDTO from '../http/dtos/UserProfileDTO';
 import { profileRepository } from './Profile.repository';
 
 const login = (loginCredentials: VolunteerCredential) => {
