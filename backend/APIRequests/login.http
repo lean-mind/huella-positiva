@@ -1,0 +1,9 @@
+#@name=login
+POST {{root}}/authentication/login
+Content-Type: application/json
+
+#IN EMAIL YOU CAN CHOOSE THE ROLE (LOOK:http-client.env.json)
+{
+  "email": "{{contact_person_mail}}",
+  "password": "{{general_password}}"
+}

@@ -1,0 +1,4 @@
+
+#IMPORTANT TO CHECK IF PROPOSALS ARE PUBLISHED IN DATABASE
+#/proposals/{page}/{size}
+GET {{root}}/proposals/0/1

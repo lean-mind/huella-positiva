@@ -1,0 +1,20 @@
+#You have to do login previously
+# take  accessToken from JSON Response accessToken
+# take XSRF-TOKEN from cookies  saved  in /.idea/httpRequests/http-client.cookies
+
+POST {{root}}/esal
+Content-Type: application/json
+Authorization: Bearer eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..uhWRh8KaTXlN9ddw.OJxlPt9_bhc2DAVjxz8bzDIRZ-3_RzZsj5xTWdwhgVaua_2L11Nnzshrle6R5tdhmJHIckjVUhD4jSMrBaRgqh-M143BA4T0MKemZBWYSEzUGtIjpv9SAUSDzCyATnmWjY19hx5HlrDrGb8p7Dw5BI_GI5HYkLE159QoWW-HZKZURU6SAPah7yjXkvGDbjrCHqJloEys_PnpD0LEVCaC_2AIZF_Vt-3Vbv-m_t3BvS10mYltFHHWsCaClUts_xhgP6DbCgZ4Kbo7VLGS5ogC9H23cG9r9qyeqFSFUVT2qa-rMs4Bl_o_fynT825LnvGLRJP5S1wB_8gokeuG_cGWNifLVN9zAucZnC30.cgL9se-U1SeJF5BkOedO6A
+X-XSRF-TOKEN: 835bd22a-0a56-4836-b77a-752cdb5c58b1
+
+{
+  "name": "EsalToRegister",
+  "description": "ESAL other Description",
+  "website": "https://www.dom-ain.com/",
+  "registeredEntity": true,
+  "entityType": "ASSOCIATION",
+  "privacyPolicy": true,
+  "dataProtectionPolicy": true,
+  "island": "Gran Canaria",
+  "zipCode": "35241"
+}
