@@ -2,6 +2,6 @@ POST {{root}}/volunteers
 Content-Type: application/json
 
 {
-  "email": "VoluntarioDePrueba1@gmail.com",
+  "email": "{{volunteer_mail}}",
   "password": "{{general_password}}"
 }
