@@ -52,7 +52,7 @@ database-up: .ensure-network ## Start database necessaries
 	docker-compose -f backend/docker/local/docker-compose.yml up -d -t0 $(SERVICES)
 
 .PHONY: build
-backend-up: ## Start frontend
+backend-up: database-up ## Start backend
 	echo "\n\n${MSG_SEPARATOR}\n\n Running the 🤘 BACKEND.\n\n"
 	echo "Go to http://localhost:8080/actuator/health. Expect to see {\"status\",\"up\"}.\n\n"
 	echo "Go to http://localhost:8080/swagger-ui. To see the documentation API.\n\n${MSG_SEPARATOR}\n\n"
