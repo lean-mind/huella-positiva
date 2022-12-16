@@ -1,7 +1,17 @@
 version: '2'
 
 services:
-#  frontend:
+  huellapositiva_frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: huellapositiva-frontend
+    ports:
+      - "3000:5000"
+    depends_on:
+      - huellapositiva_backend
+    networks:
+      - internal
 
   huellapositiva_backend:
     build:

@@ -4,8 +4,8 @@ ARG BUILD_ID=local
 LABEL stage=builder
 LABEL BUILD_ID=$BUILD_ID
 WORKDIR /workspace
-COPY . /workspace/
-RUN npm install
+COPY frontend/ /workspace/
+RUN npm ci
 RUN npm run build
 # FIXME: To refactor when the frontend uses dinamic endpoint through variables instead static "localhost" endpoint
 ARG BASE_URL
