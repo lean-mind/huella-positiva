@@ -43,8 +43,7 @@ help: ## Show command list
 ########################   BASIC    #################################
 ######################################################################
 .PHONY: up
-up: ## Start the application
-	mvn -f backend/pom.xml clean -Dmaven.test.skip=true package
+up: build ## Start the application
 	docker-compose up --build -d -t0
 
 .PHONY: down
@@ -76,7 +75,7 @@ install: node-modules database-up backend-up  ## First time install
 
 .PHONY: build
 build: ## Build application .Jar
-	cd ./backend && mvn clean package -DskipTests -Dmaven.javadoc.skip=true
+	mvn -f backend/pom.xml clean -Dmaven.test.skip=true package
 
 node-modules: ./frontend/package.json ./frontend/package-lock.json
 	echo "\n\n${MSG_SEPARATOR}\n\n Installing 📦 node-modules.\n\n${MSG_SEPARATOR}\n\n"
