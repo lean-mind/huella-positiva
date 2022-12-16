@@ -43,8 +43,11 @@ help: ## Show command list
 ########################   BASIC    #################################
 ######################################################################
 .PHONY: up
-up: build ## Start the application
-	docker-compose up --build -d -t0
+up: ## Start the application
+	docker-compose up --build -t0
+
+.PHONY: up-build
+up-build: build up## Build the .jar and start the application
 
 .PHONY: down
 database-down: ## Stop database
