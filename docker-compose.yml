@@ -1,0 +1,19 @@
+version: '2'
+services:
+#  frontend:
+
+  huellapositiva_backend-dev:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: huellapositiva-maven
+    ports:
+      - "8181:8080"
+
+#  database:
+
+volumes:
+  postgres-data:
+
+networks:
+  internal:

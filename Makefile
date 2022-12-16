@@ -42,6 +42,11 @@ help: ## Show command list
 ######################################################################
 ########################   BASIC    #################################
 ######################################################################
+.PHONY: up
+up: ## Start the application
+	mvn -f backend/pom.xml clean -Dmaven.test.skip=true package
+	docker-compose up --build -d -t0
+
 .PHONY: down
 database-down: ## Stop database
 	docker-compose -f backend/docker/local/docker-compose.yml down -t0 $(SERVICES)
