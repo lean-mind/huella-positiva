@@ -1,23 +1,11 @@
 version: '2'
 
 services:
-  huellapositiva_frontend:
-    build:
-      context: .
-      dockerfile: frontend/Dockerfile
-    container_name: huellapositiva-frontend
-    ports:
-      - "3000:5000"
-    depends_on:
-      - huellapositiva_backend
-    networks:
-      - internal
-
   huellapositiva_backend:
     build:
       context: .
       dockerfile: backend/Dockerfile
-    container_name: huellapositiva-backend
+    container_name: backend
     ports:
       - "8080:8080"
     depends_on:
@@ -28,6 +16,7 @@ services:
 
   huellapositiva_database:
     image: postgres
+    container_name: database
     ports:
       - "5432:5432"
     restart: on-failure
@@ -41,7 +30,7 @@ services:
       - internal
 
   localstack:
-    container_name: "localstack-huellapositiva-local"
+    container_name: "localstack-aws-local"
     image: localstack/localstack:0.11.5
     ports:
       - "4583:4583"
@@ -57,6 +46,7 @@ services:
 
   setup-aws-resources:
     image: mesosphere/aws-cli
+    container_name: "setup-aws-resources-localstack"
     volumes:
       - ./dev_env:/project/dev_env
     environment:

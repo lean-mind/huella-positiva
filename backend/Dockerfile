@@ -1,8 +1,9 @@
-FROM openjdk:11-jre-slim
-COPY /backend/target/backend-huellapositiva-1.0.jar /usr/src/app/
+#FROM openjdk:11-jre-slim
+FROM eclipse-temurin:11-jre-alpine
+COPY /backend/target/backend-huellapositiva-1.0.jar /usr/src/app/app.jar
 WORKDIR /usr/src/app
 EXPOSE 8080
-CMD ["java", "-jar", "backend-huellapositiva-1.0.jar"]
+CMD ["java", "-jar", "app.jar"]
 
 
 # *********************************************************************************************************

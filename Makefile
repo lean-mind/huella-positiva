@@ -42,43 +42,41 @@ help: ## Show command list
 ######################################################################
 ########################   BASIC    #################################
 ######################################################################
+.PHONY: build
+build: ## Build application .Jar
+	mvn -f backend/pom.xml clean package -Dmaven.test.skip=true -Dmaven.javadoc.skip=true
+
 .PHONY: up
 up: ## Start the application
-	docker-compose up --build -t0
-
-.PHONY: up-build
-up-build: build up## Build the .jar and start the application
+	docker-compose up -t0 -d $(SERVICES)
+	cd frontend && npm run start
 
 .PHONY: down
-database-down: ## Stop database
-	docker-compose -f backend/docker/local/docker-compose.yml down -t0 $(SERVICES)
+down: ## Stop database
+	docker-compose down -t0 $(SERVICES)
+
+.PHONY: update-backend
+api-update: build ## Build the .jar and restart the Backend
+	docker-compose build --no-cache huellapositiva_backend
+	docker-compose up -t0 -d
+	$(MAKE) .api-running-message
 
 .PHONY: up
-database-up: .ensure-network ## Start database necessaries
-	echo "\n\n${MSG_SEPARATOR}\n\n Running databases and 🐳 dockers.\n\n${MSG_SEPARATOR}\n\n"
-	docker-compose -f backend/docker/local/docker-compose.yml up -d -t0 $(SERVICES)
+api-up: ## Start the Backend
+	docker-compose up -t0 -d $(SERVICES)
+	$(MAKE) .api-running-message
 
-.PHONY: build
-backend-up: database-up ## Start backend
+.api-running-message:
 	echo "\n\n${MSG_SEPARATOR}\n\n Running the 🤘 BACKEND.\n\n"
 	echo "Go to http://localhost:8080/actuator/health. Expect to see {\"status\",\"up\"}.\n\n"
 	echo "Go to http://localhost:8080/swagger-ui. To see the documentation API.\n\n${MSG_SEPARATOR}\n\n"
-	cd ./backend && mvn clean package spring-boot:run -DskipTests -Dmaven.javadoc.skip=true
-
-frontend-up: ## Start frontend
-	echo "\n\n${MSG_SEPARATOR}\n\n Running the 🎨 FRONTEND.\n\n${MSG_SEPARATOR}\n\n"
-	cd ./frontend && npm run start
 
 .PHONY: .ensure-network
 .ensure-network:
 	[ -z "$(shell $(DOCKER_EXEC) network ls -q -f name=$(NETWORK))" ] && $(DOCKER_EXEC) network create $(NETWORK) || true
 
 .PHONY: install
-install: node-modules database-up backend-up  ## First time install
-
-.PHONY: build
-build: ## Build application .Jar
-	mvn -f backend/pom.xml clean -Dmaven.test.skip=true package
+install: node-modules build up  ## First time install
 
 node-modules: ./frontend/package.json ./frontend/package-lock.json
 	echo "\n\n${MSG_SEPARATOR}\n\n Installing 📦 node-modules.\n\n${MSG_SEPARATOR}\n\n"
