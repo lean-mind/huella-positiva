@@ -1,0 +1,82 @@
+version: '2'
+
+services:
+  huellapositiva_backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - huellapositiva_database
+      - localstack
+    networks:
+      - internal
+
+  huellapositiva_database:
+    image: postgres
+    container_name: database
+    ports:
+      - "5432:5432"
+    restart: on-failure
+    environment:
+      POSTGRES_DB: huellapositiva
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 12345
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  localstack:
+    container_name: "localstack-aws-local"
+    image: localstack/localstack:0.11.5
+    ports:
+      - "4583:4583"
+      - "4579:4579"
+      - "4572:4572"
+    environment:
+      - SERVICES=ses:4579,s3:4572,ssm:4583
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - internal
+
+  setup-aws-resources:
+    image: mesosphere/aws-cli
+    container_name: "setup-aws-resources-localstack"
+    volumes:
+      - ./dev_env:/project/dev_env
+    environment:
+      - AWS_ACCESS_KEY_ID=dummyaccess
+      - AWS_SECRET_ACCESS_KEY=dummysecret
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_LOCAL_BUCKET=backend-local
+    entrypoint: /bin/sh -c
+    command: >
+      "
+        set -e;
+        until aws ses verify-email-identity --email-address noreply@huellapositiva.com --endpoint-url=http://localstack:4579 --region $${AWS_DEFAULT_REGION} --no-sign-request; do
+          >&2 echo 'AWS SES is unavailable - sleeping'
+          sleep 1;
+        done;
+        echo 'Verified email address.';
+
+        until aws s3api create-bucket --bucket $${AWS_LOCAL_BUCKET} --acl=private --endpoint-url=http://localstack:4572 --region $${AWS_DEFAULT_REGION}; do
+          >&2 echo 'AWS S3 is unavailable - sleeping'
+          sleep 1;
+          done;
+          echo 'Bucket created successfully (S3).';
+      "
+    networks:
+      - internal
+    depends_on:
+      - localstack
+
+volumes:
+  postgres-data:
+
+networks:
+  internal:

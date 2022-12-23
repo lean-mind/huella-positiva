@@ -1,0 +1,14 @@
+version: '2'
+
+#services:
+#  huellapositiva_frontend:
+#    build:
+#      context: ./frontend
+#      dockerfile: Dockerfile-nginx
+#    container_name: frontend
+#    ports:
+#      - "3000:3000"
+#    networks:
+#      - internal
+#    volumes:
+#      - ./frontend/build:/app

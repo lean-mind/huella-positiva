@@ -1,0 +1,23 @@
+#* ###########################
+#* #### Stage 1: Builder #####
+#* ###########################
+FROM node:14.20.1-alpine3.16
+WORKDIR /app
+COPY package.json .
+COPY package-lock.json .
+RUN npm install --pure-lockfile
+COPY . .
+RUN npm run build
+# FIXME: To refactor when the frontend uses dinamic endpoint through variables instead static "localhost" endpoint
+#ARG BASE_URL
+#RUN sed -i "s#http://localhost:8080#${BASE_URL}#g" $(grep -r -l "http://localhost:8080" *)
+#RUN sed -i "s#http://localhost:3000#${BASE_URL}#g" $(grep -r -l "http://localhost:3000" *)
+
+#* ###########################
+#* ##### Stage 2: Serve ######
+#* ###########################
+FROM node:14.20.1-alpine3.16
+RUN npm install -g serve
+WORKDIR /workspace
+COPY --from=builder /app/build .
+ENTRYPOINT ["serve", "-s", "build"]
