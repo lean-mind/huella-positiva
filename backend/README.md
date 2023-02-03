@@ -111,34 +111,43 @@ On the another hand the documentation is disable with the profile `prod`, only w
 
 -   [How to start backend and frontend to use backend API](https://airanschez.wordpress.com/2020/06/06/cronicas-del-proyecto-huella-digital-parte-1/)
 
-# Information for frontend developers
+# Common Information
 
 The project has different roles:
 
--   VOLUNTEER: He can see the list of published proposals and join them.
--   VOLUNTEER_NOT_CONFIRMED: He can see the list of published proposals. (He must confirm the email in order to join a proposal)
--   CONTACT_PERSON: He can see the list of published proposals with the volunteers that have joined it. He is allowed to create proposals, modify them and request their cancellation.
--   CONTACT_PERSON_NOT_CONFIRMED: He can see the list of published proposals with the volunteers that have joined it. He is allowed to create proposals, modify them and request their cancellation. (He must confirm the email)
--   REVISER: He can see the list of published proposals with the volunteers. He is allowed to create proposals, review, modify and cancel them.
+-   **VOLUNTEER**: He can see the list of published proposals and join them.
+-   **VOLUNTEER_NOT_CONFIRMED**: He can see the list of published proposals. (He must confirm the email in order to join a proposal)
+-   **CONTACT_PERSON**: He can see the list of published proposals with the volunteers that have joined it. He is allowed to create proposals, modify them and request their cancellation.
+-   **CONTACT_PERSON_NOT_CONFIRMED**: He can see the list of published proposals with the volunteers that have joined it. He is allowed to create proposals, modify them and request their cancellation. (He must confirm the email)
+-   **REVISER**: He can see the list of published proposals with the volunteers. He is allowed to create proposals, review, modify and cancel them.
 
-## Endpoints for frontend
+## Endpoints
 
--   Change status volunteer in proposal. Endpoint POST http://localhost:8080/api/v1/proposals/changeStatusVolunteerProposal.
+If you want to use an HTTP client to work with the endpoints in order to keep developing/testing the backend, there is a json
+collection that you can import. You can find it in: ```backend/APIRequests/endpoints_json/Huella_Positiva_postman_collection.json```
+
+Once it is imported, you can follow the steps below in order to run every endpoint:
+
+-   CHANGE STATUS VOLUNTEER IN PROPOSAL. Endpoint POST http://localhost:8080/api/v1/proposals/changeStatusVolunteerProposal.
     We do not send an email in MVP version, it will be added in future versions.
     This method is POST, don´t forget to use the access token as Bearer Token and use the XSRF-TOKEN, copy and paste in HEADER as X-XSRF-TOKEN.
+    
     Steps to use this endpoint:
-          1º. Register a contact person.
-          2º. Login with contact person.
-          3º. Register ESAL.
-          4º. Register a proposal.
-          5º. Register a volunteer.
-          6º. Login with volunteer.
-          7º. Join volunteer in the proposal.
-          8º. Login with contact person.
-          9º. Use this method.
 
--   Cancel proposal as reviser. Endpoint POST http://localhost:8080/api/v1/proposals/{id}/status/cancel
+        1º. Register a contact person.
+        2º. Login with contact person.
+        3º. Register ESAL.
+        4º. Register a proposal.
+        5º. Register a volunteer.
+        6º. Login with volunteer.
+        7º. Join volunteer in the proposal.
+        8º. Login with contact person.
+        9º. Use this method.
+
+-   CANCEL PROPOSAL AS REVISER. Endpoint POST http://localhost:8080/api/v1/proposals/{id}/status/cancel
+
     Steps to test in postman:
+
           1ª. Register a contact person.
           2ª. Login as contact person.
           3ª. Register a new ESAL.
@@ -146,7 +155,7 @@ The project has different roles:
           5ª. Login as reviser.
           6ª. Use this method.
 
--   Fetch Proposal With Volunteers. Endpoint GET http://localhost:8080/api/v1/proposals/{idProposal}/proposal
+-   FETCH PROPOSAL WITH VOLUNTEERS. Endpoint GET http://localhost:8080/api/v1/proposals/{idProposal}/proposal
 
     Steps to test in postman:
 
@@ -161,9 +170,9 @@ The project has different roles:
           9ª. Use this method.
 
 
--   Fetch listed volunteers in proposal. Endpoint GET http://localhost:8080/api/v1/proposals/{idProposal}/volunteers
+-   FETCH LISTED VOLUNTEERS IN PROPOSAL. Endpoint GET http://localhost:8080/api/v1/proposals/{idProposal}/volunteers
 
-    This steps require the access token. Steps to test in postman:
+    These steps require the access token. Steps to test in postman:
 
           1ª. Register a contact person.
           2ª. Login as contact person.
@@ -175,9 +184,9 @@ The project has different roles:
           8ª. Login as reviser or contact person.
           9ª. Use this method.
 
--   Submit proposal revision. Endpoint POST http://localhost:8080/api/v1/proposals/revision/{id}
+-   SUBMIT PROPOSAL REVISION. Endpoint POST http://localhost:8080/api/v1/proposals/revision/{id}
 
-    This steps require the access token and the XSRF-TOKEN. Steps to test in postman:
+    These steps require the access token and the XSRF-TOKEN. Steps to test in postman:
 
           1ª. Register a contact person.
           2ª. Login as contact person.
@@ -186,9 +195,9 @@ The project has different roles:
           5ª. Login as reviser.
           6ª. Use this method.
 
--   Fetch listed proposals. Endpoint GET http://localhost:8080/api/v1/proposals/{page}/{size}/reviser
+-   FETCH LISTED PROPOSALS. Endpoint GET http://localhost:8080/api/v1/proposals/{page}/{size}/reviser
 
-    This steps require the access token. Steps to test in postman:
+    These steps require the access token. Steps to test in postman:
 
           1ª. Login as reviser.
           2ª. Register a new ESAL.
@@ -196,9 +205,9 @@ The project has different roles:
           4ª. Use this method.
 
 
--   Fetch listed published proposals. Endpoint GET http://localhost:8080/api/v1/proposals/{page}/{size}
+-   FETCH LISTED PUBLISHED PROPOSALS. Endpoint GET http://localhost:8080/api/v1/proposals/{page}/{size}
 
-    This steps require the access token Steps to test in postman:
+    These steps require the access token Steps to test in postman:
 
           1ª. Register a contact person.
           2ª. Login as contact person.
@@ -207,18 +216,18 @@ The project has different roles:
           5ª. Use this method.
 
 
--   Create proposal as reviser. Endpoint POST http://localhost:8080/api/v1/proposals/reviser
+-   CREATE PROPOSAL AS REVISER. Endpoint POST http://localhost:8080/api/v1/proposals/reviser
 
-    This steps require the access token. Steps to test in postman:
+    These steps require the access token. Steps to test in postman:
 
           1ª. Login as reviser.
           2ª. Register a new ESAL.
           3ª. Use this method.
 
 
--   Join proposal. Endpoint POST http://localhost:8080/api/v1/proposals/{id}/join
+-   JOIN PROPOSAL. Endpoint POST http://localhost:8080/api/v1/proposals/{id}/join
 
-    This steps require the access token. Steps to test in postman:
+    These steps require the access token. Steps to test in postman:
 
           1ª. Register a contact person.
           2ª. Login as contact person.
@@ -229,9 +238,9 @@ The project has different roles:
           7ª. Use this method.
 
 
--   Get proposal. Endpoint GET http://localhost:8080/api/v1/proposals/{id}
+-   GET PROPOSAL. Endpoint GET http://localhost:8080/api/v1/proposals/{id}
 
-    This steps require the access token. Steps to test in postman:
+    These steps require the access token. Steps to test in postman:
 
           1ª. Register a contact person.
           2ª. Login as contact person.
@@ -240,9 +249,9 @@ The project has different roles:
           5ª. Use this method.
 
 
--   Create proposal. Endpoint POST http://localhost:8080/api/v1/proposals
+-   CREATE PROPOSAL. Endpoint POST http://localhost:8080/api/v1/proposals
 
-    This steps require the access token and the XSRF-TOKEN. Steps to test in postman:
+    These steps require the access token and the XSRF-TOKEN. Steps to test in postman:
 
           1ª. Register a contact person.
           2ª. Login as contact person.
@@ -250,27 +259,27 @@ The project has different roles:
           4ª. Use this method.
 
 
--   Update photo. Endpoint POST http://localhost:8080/api/v1/volunteers/photo-upload
+-   UPDATE PHOTO. Endpoint POST http://localhost:8080/api/v1/volunteers/photo-upload
 
-    This steps require the access token and the XSRF-TOKEN. Steps to test in postman:
-
-          1ª. Register a Volunteer.
-          2ª. Login as Volunteer.
-          3ª. Use this method.
-
-
--   Fetch profile information volunteer. Endpoint GET http://localhost:8080/api/v1/volunteers/fetchProfileInformation
-
-    This steps require the access token. Steps to test in postman:
+    These steps require the access token and the XSRF-TOKEN. Steps to test in postman:
 
           1ª. Register a Volunteer.
           2ª. Login as Volunteer.
           3ª. Use this method.
 
 
--   Update profile information volunteer. Endpoint POST http://localhost:8080/api/v1/volunteers/updateProfileInformation
+-   FETCH PROFILE INFORMATION VOLUNTEER. Endpoint GET http://localhost:8080/api/v1/volunteers/fetchProfileInformation
 
-    This steps require the access token and the XSRF-TOKEN. Steps to test in postman:
+    These steps require the access token. Steps to test in postman:
+
+          1ª. Register a Volunteer.
+          2ª. Login as Volunteer.
+          3ª. Use this method.
+
+
+-   UPDATE PROFILE INFORMATION VOLUNTEER. Endpoint POST http://localhost:8080/api/v1/volunteers/updateProfileInformation
+
+    These steps require the access token and the XSRF-TOKEN. Steps to test in postman:
 
           1ª. Register a Volunteer.
           2ª. Login as Volunteer.
