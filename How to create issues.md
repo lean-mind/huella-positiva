@@ -19,3 +19,13 @@ The bigger tasks could start with __[US]__ meanning that is a __U__ser __H__isto
 The millestiones will be used to attach tasks related to an specific version. For example: MVP millestone.
 
 <!-- TODO: phtos with samples -->
+
+## Close issues
+
+In order to close an issue:
+
+1. Go to the issue.
+2. Go to the botton.
+3. Click "Closse issue"
+
+This action will automatically update the board status to "Done".
